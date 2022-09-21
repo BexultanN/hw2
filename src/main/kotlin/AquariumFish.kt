@@ -1,9 +1,13 @@
 package example.myapp
 
-abstract class AquariumFish {
-    abstract val color: String
+interface FishAction  {
+    fun eat()
 }
 
+abstract class AquariumFish : FishAction {
+    abstract val color: String
+    override fun eat() = println("yum")
+}
 
 class Shark: AquariumFish(), FishAction {
     override val color = "grey"
@@ -19,6 +23,3 @@ class Plecostomus: AquariumFish(), FishAction {
     }
 }
 
-interface FishAction  {
-    fun eat()
-}
