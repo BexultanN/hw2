@@ -1,25 +1,16 @@
 package example.myapp
 
-fun main(args: Array<String>) {
+fun main(args: Array<String>){
 
-    var hashMap : HashMap<String, Int>
-            = HashMap<String, Int> (4)
+    val hashMap:HashMap<Int,String> = HashMap<Int,String>() //define empty hashmap
+    hashMap.put(1,"Ajay")
+    hashMap.put(3,"Vijay")
+    hashMap.put(4,"Praveen")
+    hashMap.put(2,"Ajay")
+    println(".....traversing hashmap.......")
 
-    hashMap.put("IronMan" , 3000)
-    hashMap.put("Thor" , 100)
-    hashMap.put("SpiderMan" , 1100)
-    hashMap.put("NickFury" , 1200)
-
-    for(key in hashMap.keys) {
-        println("Element at key $key : ${hashMap[key]}")
-    }
-    println("\n" + "hashMap.size : " + hashMap.size )
-
-    hashMap["BlackWidow"] = 1000;
-    println("hashMap.size : " + hashMap.size + "\n")
-
-    for(key in hashMap.keys) {
-        println("Element at key $key : ${hashMap[key]}")
+    for(key in hashMap.keys){
+        println("Element at key $key = ${hashMap[key]}")
     }
 }
 
